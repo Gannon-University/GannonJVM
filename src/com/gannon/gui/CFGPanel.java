@@ -106,7 +106,10 @@ public class CFGPanel extends GraphPanel {
 
     public CFGPanel(CGraph cGraph, int width,int height) {
     	super(new ForceDirectedLayout(), width, height);
+    	// -------- Test Graph ---------
     	//cGraph=create19NodesGraph();
+    	//cGraph.processDominatorNodes(); // process Dominator nodes have to be called after creating the graph
+    	// ---------------
     	// initializing graph panel
     	// initializing list of nodes
         this.listOfNodes = new ArrayList<Node>();

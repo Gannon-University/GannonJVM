@@ -239,6 +239,10 @@ public final class CGraph {
 	public CNode getRoot() {
 		Set<CNode> set = new HashSet<CNode>(nodes);
 		set.removeAll(getTargetNodes());
+		
+		// removing all nodes that does not have any connection ( unconnected nodes)
+		set.retainAll(getSourceNodes());
+		
 		if (set.size() == 1) {
 			return set.iterator().next();
 		}
